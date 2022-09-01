@@ -1,5 +1,5 @@
 import logging
-from forest_cover.exception import forest_cover_exception
+from supply_chain_.exception import supply_chain_exception
 import yaml
 import os,sys
 import pandas as pd
@@ -25,7 +25,7 @@ from sklearn.svm import SVC
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
-from forest_cover.constant import LOGISTICS_PARAMS_TUNING,CURRENT_TIME_STAMP,SVC_PARAMS_TUNING,DECISION_TREE_TUNING,RANDOM_FOREST_TUNING,GD_TUNING
+from supply_chain_.constant import *
 
 
 def read_yaml_file(file_path:str)->dict:
@@ -37,4 +37,7 @@ def read_yaml_file(file_path:str)->dict:
         with open(file_path, 'rb') as yaml_file:
             return yaml.safe_load(yaml_file)
     except Exception as e:
-        raise forest_cover_exception(e,sys) from e
+        raise supply_chain_exception(e,sys) from e
+
+def pandas_factory(colnames, rows):
+    return pd.DataFrame(rows, columns=colnames)

@@ -8,7 +8,7 @@ def get_current_time_stamp():
 os.chdir(r"F:\Projects\Supply_Chain")
 ROOT_DIR=os.getcwd()
 CURRENT_TIME_STAMP = get_current_time_stamp()
-CONFIG_FILE_PATH="E:\\Ineuron\\Project\\forest cover classification project\\forest-cover-classification-project\\config\\config.yaml"
+CONFIG_FILE_PATH="F:\Projects\Supply_Chain\config\config.yaml"
 
 # Training pipeline related variable
 TRAINING_PIPELINE_CONFIG_KEY = "training_pipeline_config"
@@ -21,3 +21,6 @@ DATA_INGESTION_RAW_DATA_DIR_KEY = "raw_data_dir"
 DATA_INGESTION_INGESTED_DIR_NAME_KEY = "ingested_dir"
 DATA_INGESTION_TRAIN_DIR_KEY = "ingested_train_dir"
 DATA_INGESTION_TEST_DIR_KEY = "ingested_test_dir"
+
+PATH_READ_LATEST_INGESTION_DATA="F:\\Projects\\Supply_Chain\\supply_chain_\\artifact\\data_ingestion"
+ARTIFACT_DIRECTORY="F:\\Projects\\Supply_Chain\\supply_chain_\\artifact"
