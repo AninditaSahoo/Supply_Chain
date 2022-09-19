@@ -3,7 +3,7 @@ from supply_chain_.logger import logging
 from supply_chain_.exception import supply_chain_exception
 from supply_chain_.constant import *
 from supply_chain_.util.util import *
-import os,sys
+# import os,sys
 
 class Configuration:
     def __init__(self,config_file_path:str=CONFIG_FILE_PATH,current_time_stamp:str=CURRENT_TIME_STAMP) -> None:
